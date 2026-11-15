@@ -279,3 +279,14 @@
   1. 使用者完成 Git Credential Manager 授權，憑證已保存於本機 Windows 憑證庫。
   2. 首度完整推送所有歷史紀錄（15 篇 TWSE 原始文獻、Wiki 知識庫、設計系統規格書、13 頁晨曦暖陽手帳風正式簡報）。
   3. 驗證遠端同步狀態：`Your branch is up to date with 'origin/main'`，達成完整版本控制閉環。
+
+
+---
+
+## [2026-11-15] pages-index | 新增根目錄 index.html 解決 GitHub Pages 404 問題
+* **操作類型**：Deployment Configuration & Hotfix
+* **問題成因**：使用者存取 GitHub Pages 根目錄網址（`https://qaz931013-ctrl.github.io/twse-etf-guide/`）時遭遇 404 錯誤，係因 GitHub Pages 預設尋找儲存庫根目錄之 `index.html`，而原簡報位於 `outputs/` 目錄。
+* **修正措施**：
+  1. 將完整獨立之 13 頁晨曦暖陽手帳風正式簡報直接鏡像部署至根目錄 `index.html`。
+  2. 提交 Commit `92fb152`: `feat(pages): 新增根目錄 index.html 支援 GitHub Pages 首頁直接開啟`。
+  3. 自動推送到 GitHub 遠端 `origin/main`，確保使用者進入首頁網址即可全螢幕載入簡報。
