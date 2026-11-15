@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>臺灣證券交易所 ETF 投資全攻略指南 — 晨曦暖陽手帳風教學簡報</title>
+  <style>
+    /* 莫蘭迪晨曦暖陽手帳奢華配色與精緻字體系統 */
+    :root {
+      /* 紙張底色系統 */
+      --bg-journal: #fbf7ee;
+      --bg-dots: radial-gradient(#e3d7c7 1.4px, transparent 1.4px);
+      --card-paper: #ffffff;
+      --card-paper-warm: #fffdf9;
+
+      /* 頂級字體主色：深焦糖濃縮咖啡色 (比起純黑更具手帳溫度) */
+      --text-espresso: #2e1d16;
+      --text-walnut: #523b32;
+      --text-muted: #755b51;
+
+      /* 晨曦暖陽與琥珀金調 (Sunlit Amber) */
+      --amber-caramel: #b45309;
+      --amber-sunlit: #d97706;
+      --amber-warm-glow: #f59e0b;
+      --amber-light-wash: #fef3c7;
+      --amber-soft-border: #fde68a;
+
+      /* 莫蘭迪鼠尾草青綠 (Morandi Sage Green) */
+      --morandi-sage: #2d5a4c;
+      --morandi-sage-soft: #437a69;
+      --morandi-sage-wash: #eef7f3;
+      --morandi-sage-border: #b5ded2;
+
+      /* 莫蘭迪杏桃珊瑚粉 (Morandi Dusty Coral / Rose Pink) */
+      --morandi-coral: #b84c2f;
+      --morandi-coral-soft: #d96b4f;
+      --morandi-coral-wash: #fcedea;
+      --morandi-coral-border: #f5c4b8;
+
+      /* 莫蘭迪霧霾天青藍 (Morandi Dusty Slate Blue) */
+      --morandi-blue: #225877;
+      --morandi-blue-soft: #38769c;
+      --morandi-blue-wash: #eaf3f8;
+      --morandi-blue-border: #bcdbf0;
+
+      /* 莫蘭迪香濃咖啡與核桃木調 (Espresso & Walnut Coffee Brown) */
+      --coffee-deep: #5c2e0b;
+      --coffee-medium: #78350f;
+      --coffee-wash: #fdf8f6;
+      --coffee-border: #e7d5cd;
+
+      /* 紙質邊框與多層次立體陰影 */
+      --border-sketch: #dcd0bf;
+      --border-light: #ece2d5;
+      --shadow-paper-soft: 0 4px 10px rgba(46, 29, 22, 0.04), 0 16px 36px rgba(46, 29, 22, 0.08);
+      --shadow-paper-lift: 0 6px 14px rgba(46, 29, 22, 0.06), 0 22px 48px rgba(46, 29, 22, 0.13);
+      --radius-journal: 26px;
+      --radius-card: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-size: 19px; /* 放大基礎字體，確保遠距閱讀輕鬆無壓力 */
+      font-family: "PingFang TC", "Hiragino Sans TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: var(--bg-journal);
+      background-image: var(--bg-dots);
+      background-size: 26px 26px;
+      color: var(--text-espresso);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      line-height: 1.72;
+    }
+
+    /* 頂部手帳導覽列 */
+    header {
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 253, 247, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px dashed #cfbeaa;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--text-espresso);
+      letter-spacing: 0.5px;
+    }
+
+    .brand-icon {
+      font-size: 1.8rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    .header-info-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .style-tag-badge {
+      background: var(--amber-light-wash);
+      color: var(--amber-caramel);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.98rem;
+      font-weight: 800;
+      border: 1.5px solid var(--amber-soft-border);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(180, 83, 9, 0.08);
+    }
+
+    .page-counter-pill {
+      font-weight: 800;
+      color: var(--text-espresso);
+      font-size: 1.05rem;
+      background: #f0e6d8;
+      padding: 6px 18px;
+      border-radius: 30px;
+      border: 1.5px solid var(--border-sketch);
+    }
+
+    .progress-bar-rail {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: #e7dcce;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 8%;
+      background: linear-gradient(90deg, #f59e0b, #d97706, #78350f, #5c2e0b);
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 簡報主舞台（活頁手帳筆記本） */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 24px;
+      position: relative;
+    }
+
+    .journal-viewport {
+      width: 100%;
+      max-width: 1240px;
+      min-height: 670px;
+      background: var(--card-paper-warm);
+      border-radius: var(--radius-journal);
+      box-shadow: var(--shadow-paper-soft);
+      border: 2px solid var(--border-sketch);
+      padding: 48px 56px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      animation: pageOpen 0.35s ease-out;
+    }
+
+    @keyframes pageOpen {
+      from { opacity: 0; transform: translateY(12px) rotate(-0.3deg); }
+      to { opacity: 1; transform: translateY(0) rotate(0); }
+    }
+
+    /* 手帳金屬活頁扣環裝飾 */
+    .binder-rings {
+      position: absolute;
+      top: -14px;
+      left: 64px;
+      display: flex;
+      gap: 38px;
+      z-index: 20;
+    }
+
+    .ring-element {
+      width: 18px;
+      height: 28px;
+      background: linear-gradient(180deg, #d5ccbe 0%, #9e9182 50%, #6e6052 100%);
+      border-radius: 9px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .slide {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    /* 紙膠帶 (Washi Tape) 標籤 */
+    .washi-tape {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 20px;
+      font-weight: 800;
+      font-size: 1rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(46, 29, 22, 0.08);
+      margin-bottom: 12px;
+      width: fit-content;
+      position: relative;
+      letter-spacing: 0.5px;
+    }
+
+    .washi-tape.amber, .washi-tape.yellow {
+      background: rgba(254, 243, 199, 0.92);
+      color: var(--amber-caramel);
+      border-left: 3px dashed var(--amber-sunlit);
+      border-right: 3px dashed var(--amber-sunlit);
+      transform: rotate(-1.2deg);
+    }
+
+    .washi-tape.sage {
+      background: rgba(233, 242, 238, 0.95);
+      color: var(--morandi-sage);
+      border-left: 3px dashed var(--morandi-sage-soft);
+      border-right: 3px dashed var(--morandi-sage-soft);
+      transform: rotate(-1deg);
+    }
+
+    .washi-tape.coral {
+      background: rgba(254, 230, 222, 0.92);
+      color: var(--morandi-coral);
+      border-left: 3px dashed var(--morandi-coral-soft);
+      border-right: 3px dashed var(--morandi-coral-soft);
+      transform: rotate(1deg);
+    }
+
+    .washi-tape.blue {
+      background: rgba(234, 243, 248, 0.95);
+      color: var(--morandi-blue);
+      border-left: 3px dashed var(--morandi-blue-soft);
+      border-right: 3px dashed var(--morandi-blue-soft);
+      transform: rotate(0.8deg);
+    }
+
+    .washi-tape.brown, .washi-tape.coffee {
+      background: rgba(245, 235, 230, 0.95);
+      color: #5c2e0b;
+      border-left: 3px dashed #78350f;
+      border-right: 3px dashed #78350f;
+      transform: rotate(1deg);
+    }
+
+    /* 標題與螢光筆畫線美學 */
+    .slide-title {
+      font-size: 2.45rem;
+      color: var(--text-espresso);
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .highlighter-amber {
+      background: linear-gradient(180deg, transparent 60%, rgba(253, 224, 71, 0.55) 60%);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    .highlighter-coral {
+      background: linear-gradient(180deg, transparent 60%, rgba(254, 205, 192, 0.65) 60%);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    .highlighter-sage {
+      background: linear-gradient(180deg, transparent 60%, rgba(188, 225, 214, 0.6) 60%);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    .highlighter-blue {
+      background: linear-gradient(180deg, transparent 60%, rgba(186, 230, 253, 0.65) 60%);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    .highlighter-coffee, .highlighter-brown {
+      background: linear-gradient(180deg, transparent 60%, rgba(231, 213, 205, 0.75) 60%);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    .slide-subtitle {
+      font-size: 1.22rem;
+      color: var(--text-walnut);
+      margin-bottom: 22px;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .slide-footer {
+      margin-top: 24px;
+      padding-top: 14px;
+      border-top: 1.5px dashed var(--border-sketch);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* 網格與手帳便籤卡片 (Memo Cards) */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 22px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .memo-card {
+      background: #ffffff;
+      border: 1.8px solid var(--border-sketch);
+      border-radius: var(--radius-card);
+      padding: 26px;
+      position: relative;
+      box-shadow: 0 6px 16px rgba(46, 29, 22, 0.05);
+      transition: all 0.25s ease;
+    }
+
+    .memo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-paper-lift);
+      border-color: #baab98;
+    }
+
+    .memo-pin {
+      position: absolute;
+      top: -14px;
+      right: 22px;
+      font-size: 1.5rem;
+      filter: drop-shadow(0 3px 5px rgba(0,0,0,0.15));
+    }
+
+    .memo-tag-top {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: var(--text-espresso);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 3px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .memo-tag-top.amber, .memo-tag-top.yellow { background: #d97706; color: #fff; }
+    .memo-tag-top.coral { background: #c2410c; color: #fff; }
+    .memo-tag-top.sage { background: #2d5a4c; color: #fff; }
+    .memo-tag-top.blue { background: #0284c7; color: #fff; }
+    .memo-tag-top.coffee, .memo-tag-top.brown { background: #78350f; color: #fff; }
+
+    .memo-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--text-espresso);
+      margin-top: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .memo-body {
+      font-size: 1.12rem;
+      color: var(--text-espresso);
+      line-height: 1.7;
+    }
+
+    /* 懸掛縮排清單：確保第二行文字不跑到 • 下方，空一格對齊 */
+    .indent-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .indent-list li {
+      position: relative;
+      padding-left: 1.25em;
+      margin-bottom: 7px;
+      line-height: 1.55;
+    }
+
+    .indent-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 900;
+      color: var(--amber-caramel);
+    }
+
+    .card-yellow { background: #fffbeb; border-color: #fde68a; }
+    .card-sage { background: #eef7f3; border-color: #b5ded2; }
+    .card-coral { background: #fff5f2; border-color: #f5c4b8; }
+    .card-blue { background: #f0f7ff; border-color: #bcdbf0; }
+    .card-coffee, .card-brown { background: #fdf8f6; border-color: #e7d5cd; }
+
+    /* 數據與重點指標盒 */
+    .metric-memo-box {
+      text-align: center;
+      padding: 22px 18px;
+      background: #ffffff;
+      border: 2px solid var(--border-sketch);
+      border-radius: var(--radius-card);
+      box-shadow: 0 6px 14px rgba(46, 29, 22, 0.05);
+    }
+
+    .metric-label {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .metric-value {
+      font-size: 2.35rem;
+      font-weight: 900;
+      color: var(--amber-caramel);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .metric-value.coral { color: #dc2626; }
+    .metric-value.sage { color: #16a34a; }
+    .metric-value.blue { color: #0284c7; }
+    .metric-value.amber, .metric-value.yellow { color: #d97706; }
+    .metric-value.coffee, .metric-value.brown { color: #5c2e0b; }
+
+    /* 手帳表格排版 */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: var(--radius-card);
+      border: 2px solid var(--border-sketch);
+      box-shadow: 0 6px 16px rgba(46, 29, 22, 0.05);
+      background: #ffffff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th {
+      background: #f7efe4;
+      color: var(--text-espresso);
+      padding: 16px 20px;
+      font-size: 1.15rem;
+      font-weight: 900;
+      border-bottom: 2px solid var(--border-sketch);
+    }
+
+    td {
+      padding: 15px 20px;
+      font-size: 1.06rem;
+      border-bottom: 1px solid #ebd9c8;
+      color: var(--text-espresso);
+      vertical-align: middle;
+      line-height: 1.55;
+    }
+
+    tr:nth-child(even) { background: #fffcf8; }
+    tr:hover { background: #fdf5eb; }
+
+    .table-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .table-badge.amber { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .table-badge.sage { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .table-badge.coral { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .table-badge.blue { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+    .table-badge.coffee, .table-badge.brown { background: #fdf8f6; color: #5c2e0b; border: 1px solid #e7d5cd; }
+
+    /* 封面專屬視覺與可愛印章展示 */
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px 16px;
+      gap: 18px;
+    }
+
+    .hero-title {
+      font-size: 3.15rem;
+      font-weight: 900;
+      color: var(--text-espresso);
+      line-height: 1.24;
+      letter-spacing: -0.8px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.35rem;
+      color: var(--text-walnut);
+      max-width: 900px;
+      line-height: 1.65;
+    }
+
+    .stamp-collection-box {
+      border: 2px dashed #bfae9a;
+      border-radius: 20px;
+      padding: 22px 28px;
+      background: #fffdf9;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 920px;
+      margin-top: 10px;
+      box-shadow: 0 4px 12px rgba(46, 29, 22, 0.04);
+    }
+
+    .stamp-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .stamp-icon {
+      font-size: 2.8rem;
+      filter: drop-shadow(0 3px 6px rgba(0,0,0,0.1));
+      transition: transform 0.25s ease;
+    }
+
+    .stamp-item:hover .stamp-icon {
+      transform: scale(1.15) rotate(4deg);
+    }
+
+    .stamp-title {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--text-espresso);
+    }
+
+    .stamp-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* 底部操作與導航列 */
+    footer {
+      padding: 18px 40px;
+      background: rgba(255, 253, 247, 0.96);
+      backdrop-filter: blur(12px);
+      border-top: 2px dashed #cfbeaa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      bottom: 0;
+      z-index: 100;
+    }
+
+    .keyboard-hint {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.98rem;
+      color: var(--text-walnut);
+      font-weight: 700;
+    }
+
+    .kbd {
+      background: #f0e6d8;
+      border: 1.5px solid #cbbaa6;
+      border-radius: 6px;
+      box-shadow: 0 2px 0 #baa894;
+      padding: 4px 10px;
+      font-family: monospace;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-espresso);
+    }
+
+    .indicators {
+      display: flex;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ded1c1;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .dot.active {
+      background: var(--amber-caramel);
+      transform: scale(1.35);
+      box-shadow: 0 0 10px rgba(180, 83, 9, 0.4);
+    }
+
+    .nav-btn {
+      background: var(--text-espresso);
+      color: #ffffff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 1.12rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 5px 16px rgba(46, 29, 22, 0.25);
+      transition: all 0.25s ease;
+    }
+
+    .nav-btn:hover {
+      background: #1c100b;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(46, 29, 22, 0.35);
+    }
+
+    .nav-btn.secondary {
+      background: #f0e6d8;
+      color: var(--text-espresso);
+      border: 1.5px solid var(--border-sketch);
+      box-shadow: none;
+    }
+
+    .nav-btn.secondary:hover {
+      background: #e2d4c2;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .journal-viewport { padding: 24px; }
+      .hero-title { font-size: 2.3rem; }
+      .slide-title { font-size: 1.8rem; }
+      footer { flex-direction: column; gap: 14px; }
+      header { padding: 12px 18px; }
+      .stamp-collection-box { flex-direction: column; gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頂部手帳導覽列 -->
+  <header>
+    <div class="brand-container">
+      <span class="brand-icon">📔</span>
+      <span>臺灣證券交易所 ETF 避坑筆記・暖陽手帳指南</span>
+    </div>
+    <div class="header-info-group">
+      <div class="style-tag-badge">
+        <span>✨ 晨曦暖陽手帳風 (精修莫蘭迪配色版)</span>
+      </div>
+      <div class="page-counter-pill" id="slideCounter">第 1 / 13 頁</div>
+    </div>
+    <div class="progress-bar-rail">
+      <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+  </header>
+
+  <!-- 簡報主舞台 -->
+  <main>
+    <div class="journal-viewport">
+      <!-- 活頁夾金屬扣環 -->
+      <div class="binder-rings">
+        <div class="ring-element"></div>
+        <div class="ring-element"></div>
+        <div class="ring-element"></div>
+        <div class="ring-element"></div>
+      </div>
+
+      <!-- SLIDE 1: 封面頁 -->
+      <section class="slide active" data-title="首頁：我的第一本 ETF 避坑手帳">
+        <div class="hero-content">
+          <div style="display:flex; justify-content:center; margin-bottom:4px;">
+            <div class="washi-tape sage">🌱 普惠金融・小資新手專屬</div>
+          </div>
+
+          <h1 class="hero-title">
+            我的第一本 <span class="highlighter-amber">ETF 避坑手帳</span>：<br>新手也能懂的投資全攻略
+          </h1>
+
+          <p class="hero-subtitle">
+            從「一籃子優質資產組合」客觀被動哲學出發，搞懂台股雙市場機制、折溢價避坑標準、租稅優惠與「e添富」官方實務操作！
+          </p>
+
+          <div class="stamp-collection-box">
+            <div class="stamp-item">
+              <span class="stamp-icon">🧺</span>
+              <div class="stamp-title" style="white-space:nowrap; color:#78350f;">一籃子資產</div>
+            </div>
+            <div class="stamp-item">
+              <span class="stamp-icon">⚖️</span>
+              <div class="stamp-title" style="white-space:nowrap; color:#5c2e0b;">淨值與市價</div>
+            </div>
+            <div class="stamp-item">
+              <span class="stamp-icon">🐷</span>
+              <div class="stamp-title" style="line-height:1.25; text-align:center; color:#78350f;">微笑曲線<br>撲滿</div>
+            </div>
+            <div class="stamp-item">
+              <span class="stamp-icon">🏷️</span>
+              <div class="stamp-title" style="white-space:nowrap; color:#5c2e0b;">折溢價警示</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-footer">
+          <span>📚 官方資料來源：臺灣證券交易所 (TWSE) ETF 專區</span>
+          <span>⌨️ 支援鍵盤方向鍵 ← → 或點擊下方按鈕翻頁閱讀</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: 學習地圖 -->
+      <section class="slide" data-title="學習地圖：四大核心站點">
+        <div class="slide-header">
+          <div class="washi-tape amber">🧭 翻開目錄</div>
+          <h2 class="slide-title">一張圖看懂新手投資四大航向站點</h2>
+          <p class="slide-subtitle">依循證交所官方知識庫體系，循序漸進建立客觀投資邏輯與風控防線</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-4">
+            <div class="memo-card card-sage" style="background:#eef7f3; border:2px solid #b5ded2; box-shadow:0 4px 12px rgba(45,90,76,0.06);">
+              <div class="memo-tag-top sage" style="background:#2d5a4c; color:#ffffff; font-weight:800;">第一站</div>
+              <div style="font-size:2.2rem; margin-top:6px; margin-bottom:8px;">🧺</div>
+              <div class="memo-title" style="color:#1d4235;">基礎概念篇</div>
+              <ul class="indent-list" style="color:#244c3e;">
+                <li>什麼是 ETF？</li>
+                <li>一籃子優質企業組合</li>
+                <li>個股 vs 基金 vs ETF</li>
+                <li>淨值與市價雙軌體系</li>
+              </ul>
+            </div>
+
+            <div class="memo-card card-blue" style="background:#f0f7ff; border:2px solid #bcdbf0; box-shadow:0 4px 12px rgba(2,132,199,0.06);">
+              <div class="memo-tag-top blue" style="background:#0284c7; color:#ffffff; font-weight:800;">第二站</div>
+              <div style="font-size:2.2rem; margin-top:6px; margin-bottom:8px;">🏛️</div>
+              <div class="memo-title" style="color:#0369a1;">商品種類篇</div>
+              <ul class="indent-list" style="color:#1e3a8a;">
+                <li>證信託 / 期貨 / 境外架構</li>
+                <li>市值型 vs 高股息型</li>
+                <li>債券型與海外跨境 ETF</li>
+                <li>主管機關主動式新規</li>
+              </ul>
+            </div>
+
+            <div class="memo-card card-yellow" style="background:#fffbeb; border:2px solid #fde68a; box-shadow:0 4px 12px rgba(217,119,6,0.06);">
+              <div class="memo-tag-top amber" style="background:#d97706; color:#ffffff; font-weight:800;">第三站</div>
+              <div style="font-size:2.2rem; margin-top:6px; margin-bottom:8px;">⏱️</div>
+              <div class="memo-title" style="color:#b45309;">交易實務篇</div>
+              <ul class="indent-list" style="color:#78350f;">
+                <li>集中市場 9:00～13:30</li>
+                <li>盤中零股 (5秒撮合)</li>
+                <li>定期定額微笑曲線</li>
+                <li>賣出證交稅 0.1% 省 67%</li>
+              </ul>
+            </div>
+
+            <div class="memo-card card-coral" style="background:#fff5f2; border:2px solid #f5c4b8; box-shadow:0 4px 12px rgba(194,65,12,0.06);">
+              <div class="memo-tag-top coral" style="background:#c2410c; color:#ffffff; font-weight:800;">第四站</div>
+              <div style="font-size:2.2rem; margin-top:6px; margin-bottom:8px;">🛡️</div>
+              <div class="memo-title" style="color:#9a3412;">風險風控篇</div>
+              <ul class="indent-list" style="color:#7c2d12;">
+                <li>溢價 ≥ 3% 警示線防呆</li>
+                <li>追蹤誤差四大成因</li>
+                <li>槓桿反向每日複利耗損</li>
+                <li>「e添富」進場前三自保</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>對應章節：raw/01 至 raw/15 官方專題總覽</span>
+          <span>知識庫編譯依據：wiki/index.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: 一籃子優質資產哲學 -->
+      <section class="slide" data-title="核心本質：什麼是 ETF？">
+        <div class="slide-header">
+          <div class="washi-tape amber">💡 核心本質剖析</div>
+          <h2 class="slide-title">別把雞蛋放在同個籃子：<span class="highlighter-amber">一籃子優質資產哲學</span></h2>
+          <p class="slide-subtitle">指數股票型基金（Exchange Traded Fund, ETF）的生活化白話剖析</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="memo-card card-blue" style="background:#f0f6fa; border:2px solid #bcd7e6; box-shadow:0 4px 12px rgba(43,92,117,0.06);">
+              <div class="memo-pin">📎</div>
+              <div class="memo-tag-top blue" style="background:#2b5c75; color:#ffffff; font-weight:800;">個股單押陷阱</div>
+              <div class="memo-title" style="color:#20485d; font-weight:900;">
+                <span>⚠️ 傳統買個股：重壓單一企業</span>
+              </div>
+              <div class="memo-body" style="color:#1a3d4f;">
+                • <strong style="color:#2b5c75;">單一公司風險極高</strong>：若把資金全押在同一家公司，萬一該公司經營不善、財報爆雷、行業被顛覆或面臨下市，投資人將承受致命的毀滅性虧損。<br><br>
+                • <strong style="color:#2b5c75;">心理壓力沉重</strong>：必須每天盯盤研究該公司的產能、營收與管理層變動，散戶容易處於資訊落後的弱勢劣勢。
+              </div>
+            </div>
+
+            <div class="memo-card card-yellow" style="background:#fffbeb; border:2px solid #fde68a; box-shadow:0 4px 12px rgba(217,119,6,0.06);">
+              <div class="memo-pin">🏷️</div>
+              <div class="memo-tag-top amber" style="background:#d97706; color:#ffffff; font-weight:800;">ETF 一籃子優勢</div>
+              <div class="memo-title" style="color:#b45309; font-weight:900;">
+                <span>🧺 買進 ETF：打包一整籃頂尖龍頭</span>
+              </div>
+              <div class="memo-body" style="color:#78350f;">
+                • <strong style="color:#b45309;">天然分散非系統性風險</strong>：指數編製機構依客觀透明規則挑選市場前 50 大企業或穩健高息龍頭。買進一張，就等於按權重同時持有幾十家頂尖企業！<br><br>
+                • <strong style="color:#b45309;">自動定期汰弱留強</strong>：指數每季或每半年自動審核，表現衰退的公司被剔除，新崛起的強勢企業被納入，投資人無需猜測飆股。
+              </div>
+            </div>
+          </div>
+
+          <div class="washi-tape sage" style="width:100%; justify-content:center; transform:none; font-size:1.06rem; padding:12px 18px; background:rgba(233, 242, 238, 0.95); border:1.8px dashed #a8c8bd; color:#244c3e;">
+            <span>💡 <strong style="color:#1d4235;">證交所法定全稱：</strong>「指數股票型證券投資信託基金」，兼具<strong style="color:#244c3e; background:#d4ebd4; padding:2px 6px; border-radius:4px;">共同基金「分散風險」</strong>與<strong style="color:#244c3e; background:#d4ebd4; padding:2px 6px; border-radius:4px;">股票「集中市場隨時交易」</strong>的雙重強項！</span>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/01_TWSE_ETF總覽與基本特性.md</span>
+          <span>關聯知識：wiki/concepts/一籃子資產與分散風險.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: 三方比一比表格 -->
+      <section class="slide" data-title="核心對照：個股 vs 共同基金 vs ETF">
+        <div class="slide-header">
+          <div class="washi-tape amber">📊 橫向對照手帳</div>
+          <h2 class="slide-title">三方比一比：新手為什麼首選 ETF？</h2>
+          <p class="slide-subtitle">從九大維度全面客觀對照個股、主動式共同基金與指數股票型基金（ETF）</p>
+        </div>
+        <div class="slide-body">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:18%;">比較維度</th>
+                  <th style="width:26%;">🌱 個股 (Single Stock)</th>
+                  <th style="width:28%;">🏦 傳統共同基金 (Mutual Fund)</th>
+                  <th style="width:28%; background:#fcf2e3; color:var(--amber-caramel);">✨ 指數股票型基金 (ETF)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>標的組合</strong></td>
+                  <td>單一企業股票</td>
+                  <td>一籃子股票或債券</td>
+                  <td><span class="table-badge amber">一籃子標的指數成分證券</span></td>
+                </tr>
+                <tr>
+                  <td><strong>管理哲學</strong></td>
+                  <td>投資人自行選股操盤</td>
+                  <td>經理人主觀選股與擇時操作</td>
+                  <td><span class="table-badge amber">被動追蹤指數規則 (亦有主動式)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>分散風險</strong></td>
+                  <td>❌ 極低（面臨個股踩雷）</td>
+                  <td>✅ 高（經理人挑選多檔）</td>
+                  <td><span class="table-badge amber">✅ 極高（客觀打包數十至上百檔）</span></td>
+                </tr>
+                <tr>
+                  <td><strong>交易便利性</strong></td>
+                  <td>盤中撮合，隨時買賣</td>
+                  <td>每日僅一收盤淨值，申贖交割多日</td>
+                  <td><span class="table-badge amber">證券戶盤中隨時下單，流動性高</span></td>
+                </tr>
+                <tr>
+                  <td><strong>賣出證交稅</strong></td>
+                  <td>千分之三 (0.3%)</td>
+                  <td>申購贖回免證交稅</td>
+                  <td><span class="table-badge coffee">千分之一 (0.1%)【直接省 67%】</span></td>
+                </tr>
+                <tr>
+                  <td><strong>經理保管費</strong></td>
+                  <td>無</td>
+                  <td>偏高 (年約 1.5%～2.5%+)</td>
+                  <td><span class="table-badge amber">極低 (國內原型多約 0.2%～0.4%)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>持股透明度</strong></td>
+                  <td>個股單一財報</td>
+                  <td>偏低 (每季僅公布前十大持股)</td>
+                  <td><span class="table-badge amber">極高 (每日投信官網公布全持股)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/01 及 raw/12 官方稅費規範</span>
+          <span>關聯知識：wiki/synthesis/三方比一比-個股-共同基金-ETF.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: 雙市場與雙價格機制 -->
+      <section class="slide" data-title="價格機制：淨值 vs 市價">
+        <div class="slide-header">
+          <div class="washi-tape amber">⚖️ 價格機制</div>
+          <h2 class="slide-title">雙市場與雙價格：弄懂<span class="highlighter-blue">「真實淨值」</span>與<span class="highlighter-sage">「交易市價」</span></h2>
+          <p class="slide-subtitle">為什麼 ETF 能在盤中隨時買賣？初級市場與次級市場的分工大公開</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="memo-card" style="background:#f0f9ff; border:2px solid #bae6fd; box-shadow:0 4px 12px rgba(2,132,199,0.06);">
+              <div class="memo-tag-top" style="background:#0284c7; color:#ffffff; font-weight:800;">初級市場</div>
+              <div class="memo-title" style="color:#0369a1; font-size:1.45rem; font-weight:900;">
+                <span style="font-size:2.2rem; margin-right:6px;">🏛️</span>
+                <span>初級市場 (大宗批發水庫)</span>
+              </div>
+              <div class="memo-body" style="color:#1e3a8a;">
+                • <strong style="color:#0284c7;">參與對象</strong>：機構法人與授權參與者 (造市商 AP)。<br>
+                • <strong style="color:#0284c7;">運作機制</strong>：以大額門檻 (如 500 張一基數)，拿一籃子股票向投信換發新單位 (申購) 或換回股票 (贖回)。<br>
+                • <strong style="color:#0284c7;">計價標準</strong>：以每日收盤後結算之<strong style="color:#0369a1; background:#e0f2fe; padding:2px 6px; border-radius:4px;">【官方淨值 (NAV)】</strong>為準。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#f0fdf4; border:2px solid #bbf7d0; box-shadow:0 4px 12px rgba(22,163,74,0.06);">
+              <div class="memo-tag-top" style="background:#16a34a; color:#ffffff; font-weight:800;">次級市場</div>
+              <div class="memo-title" style="color:#15803d; font-size:1.45rem; font-weight:900;">
+                <span style="font-size:2.2rem; margin-right:6px;">🏪</span>
+                <span>次級市場 (散戶集中撮合)</span>
+              </div>
+              <div class="memo-body" style="color:#14532d;">
+                • <strong style="color:#16a34a;">參與對象</strong>：廣大一般投資散戶大眾。<br>
+                • <strong style="color:#16a34a;">運作機制</strong>：透過券商 App，於營業時間 (9:00～13:30) 與其他投資人自由買賣撮合。<br>
+                • <strong style="color:#16a34a;">計價標準</strong>：依買賣情緒與即時供需撮合成交之<strong style="color:#15803d; background:#dcfce7; padding:2px 6px; border-radius:4px;">【市價 (Market Price)】</strong>。
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <div class="metric-memo-box" style="background:#fefce8; border:2px solid #fef08a; text-align:center; padding:18px 14px;">
+              <div style="font-size:1.35rem; font-weight:900; color:#854d0e; margin-bottom:8px;">官方淨值 (NAV)</div>
+              <div style="font-size:1.15rem; font-weight:800; color:#a16207; background:#fef9c3; padding:3px 10px; border-radius:8px; display:inline-block; margin-bottom:10px;">真實含金量</div>
+              <div class="memo-body" style="color:#713f12; font-size:0.96rem; line-height:1.5;">總資產扣除費用除以單位數，每日官方結算一次</div>
+            </div>
+            <div class="metric-memo-box" style="background:#fff7ed; border:2px solid #fed7aa; text-align:center; padding:18px 14px;">
+              <div style="font-size:1.35rem; font-weight:900; color:#c2410c; margin-bottom:8px;">集中市價 (Price)</div>
+              <div style="font-size:1.15rem; font-weight:800; color:#ea580c; background:#ffedd5; padding:3px 10px; border-radius:8px; display:inline-block; margin-bottom:10px;">現場成交價</div>
+              <div class="memo-body" style="color:#9a3412; font-size:0.96rem; line-height:1.5;">集中市場投資人即時撮合，每分每秒動態跳動</div>
+            </div>
+            <div class="metric-memo-box" style="background:#fdf8f6; border:2px solid #e7d5cd; text-align:center; padding:18px 14px;">
+              <div style="font-size:1.35rem; font-weight:900; color:#5c2e0b; margin-bottom:8px;">即時預估淨值 (iNAV)</div>
+              <div style="font-size:1.15rem; font-weight:800; color:#78350f; background:#f5ebe6; padding:3px 10px; border-radius:8px; display:inline-block; margin-bottom:10px;">盤中動態溫度計</div>
+              <div class="memo-body" style="color:#451a03; font-size:0.96rem; line-height:1.5;">投信盤中每 15 秒試算一次之動態參考價值</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/02 及 raw/03 雙市場與雙價格篇</span>
+          <span>關聯知識：wiki/concepts/雙市場與雙價格機制.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: 折溢價防坑線 -->
+      <section class="slide" data-title="防坑指南：折溢價與警示線">
+        <div class="slide-header">
+          <div class="washi-tape coral">🚨 新手避坑貼士</div>
+          <h2 class="slide-title">買貴了！折溢價公式與 <span class="highlighter-coral">3% 紅底防呆警示線</span></h2>
+          <p class="slide-subtitle">市價脫離淨值的危險陷阱：如何避免買在溢價高點現賠差價？</p>
+        </div>
+        <div class="slide-body">
+          <div class="memo-card" style="text-align:center; padding:18px; background:#eff6fc; border:2px solid #bcdbf0; box-shadow:0 4px 12px rgba(2,132,199,0.06);">
+            <div class="memo-pin">🏷️</div>
+            <span style="font-size:1.15rem; font-weight:800; color:#0284c7;">折溢價率計算公式：</span>
+            <div style="font-size:1.65rem; font-weight:900; margin-top:6px; color:#034f75; letter-spacing:0.5px;">
+              <strong>折溢價率 (%) = [ ( 市價 − 淨值 ) ÷ 淨值 ] × 100%</strong>
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <div class="metric-memo-box" style="background:#f0fdf4; border:2px solid #86efac;">
+              <div class="metric-label" style="color:#15803d;">🟢 正常造市區間</div>
+              <div class="metric-value" style="color:#16a34a;">±0.5%</div>
+              <div class="memo-body" style="color:#14532d;">國內原型 ETF 正常盤中波動常態，造市商正常微調</div>
+            </div>
+
+            <div class="metric-memo-box" style="background:#fff7ed; border:2px solid #fdba74;">
+              <div class="metric-label" style="color:#c2410c;">🟠 證交所紅底警示線</div>
+              <div class="metric-value" style="color:#ea580c;">≥ 3.0%</div>
+              <div class="memo-body" style="color:#9a3412;">證交所 MIS 標示紅底警示！下單 App 強制彈出確認視窗</div>
+            </div>
+
+            <div class="metric-memo-box" style="background:#fef2f2; border:2px solid #fca5a5;">
+              <div class="metric-label" style="color:#b91c1c;">🔴 極度危險警戒區</div>
+              <div class="metric-value" style="color:#dc2626;">≥ 5.0%</div>
+              <div class="memo-body" style="color:#991b1b;"><strong style="color:#b91c1c;">絕對切勿盲目追價！</strong>熱潮退去後市價必向淨值收斂，現買現虧！</div>
+            </div>
+          </div>
+
+          <div class="memo-card" style="background:#eff6fc; border:2px solid #bcdbf0;">
+            <div class="memo-title" style="color:#0284c7;">⚠️ 什麼是「溢價收斂虧損」？</div>
+            <div class="memo-body" style="color:#1e3a8a;">
+              若某 ETF 淨值 100 元，因市場瘋搶市價被炒到 105 元（溢價 5%）。當造市商釋出籌碼或市場冷靜，市價跌回 100 元。<strong style="color:#034f75; font-weight:900;">即便背後成分股完全沒跌，追高買進的投資人也會白白承受 5% 的本金虧損！</strong>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/04_TWSE_ETF折溢價公式與市場警示標準.md</span>
+          <span>關聯知識：wiki/concepts/折溢價與套利收斂.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: ETF 種類全家福 -->
+      <section class="slide" data-title="產品體系：ETF 種類全家福">
+        <div class="slide-header">
+          <div class="washi-tape amber">🏛️ 商品全家福</div>
+          <h2 class="slide-title">臺灣 ETF 種類全家福：三大發行架構與資產光譜</h2>
+          <p class="slide-subtitle">認識上市 ETF 的法律架構與核心被動資產類別</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="memo-card" style="background:#fffbeb; border:2px solid #fde68a; box-shadow:0 4px 12px rgba(217,119,6,0.06);">
+              <div class="memo-tag-top" style="background:#d97706; color:#fff; font-weight:800;">法規架構</div>
+              <div class="memo-title" style="color:#b45309; font-weight:900;">🏢 三大發行架構</div>
+              <div class="memo-body" style="color:#78350f; line-height:1.68;">
+                1. <strong style="color:#b45309;">證信託 ETF</strong>：國內投信發行，投資股票、債券等，為市場最大宗。<br>
+                2. <strong style="color:#d97706;">期信託 ETF</strong>：投資黃金、原油等期貨契約。<br>
+                3. <strong style="color:#78350f;">跨境境外 ETF</strong>：外國旗艦商品跨海來臺第二上市。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#fdf8f6; border:2px solid #e7d5cd; box-shadow:0 4px 12px rgba(120,53,15,0.06);">
+              <div class="memo-tag-top" style="background:#78350f; color:#fff; font-weight:800;">本土核心</div>
+              <div class="memo-title" style="color:#5c2e0b; font-weight:900;">🇹🇼 國內成分股 ETF</div>
+              <div class="memo-body" style="color:#451a03; line-height:1.68;">
+                • <strong style="color:#78350f;">市值型</strong>：追蹤臺灣前 50 大企業，貼緊大盤長期成長。<br>
+                • <strong style="color:#5c2e0b;">高股息型</strong>：量化篩選高殖利率與配息穩健企業。<br>
+                • <strong style="color:#78350f;">交易特色</strong>：適用臺股標準 <strong style="color:#5c2e0b; background:#f5ebe6; padding:1px 5px; border-radius:4px;">10% 漲跌幅限制</strong>。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#fffbeb; border:2px solid #fde68a; box-shadow:0 4px 12px rgba(217,119,6,0.06);">
+              <div class="memo-tag-top" style="background:#d97706; color:#fff; font-weight:800;">全球配置</div>
+              <div class="memo-title" style="color:#b45309; font-weight:900;">🌐 國外成分股 ETF</div>
+              <div class="memo-body" style="color:#78350f; line-height:1.68;">
+                • <strong style="color:#b45309;">投資範圍</strong>：美股標普 500、那斯達克、日本、歐美各國指數。<br>
+                • <strong style="color:#d97706;">重大特徵</strong>：次級市場交易<strong style="color:#b45309; background:#fef3c7; padding:2px 6px; border-radius:4px;">【無漲跌幅限制】</strong>！<br>
+                • 須留意跨國交易時差與匯率波動。
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="memo-card" style="background:#fdf8f6; border:2px solid #e7d5cd; box-shadow:0 4px 12px rgba(120,53,15,0.06);">
+              <div class="memo-tag-top" style="background:#78350f; color:#fff; font-weight:800;">租稅優惠</div>
+              <div class="memo-title" style="color:#5c2e0b; font-weight:900;">📜 債券及固定收益 ETF</div>
+              <div class="memo-body" style="color:#451a03; line-height:1.68;">
+                • 投資各國公債（如美債）、投資等級公司債、金融債。<br>
+                • 波動通常較股票平緩，依規享有<strong style="color:#5c2e0b; background:#f5ebe6; padding:2px 6px; border-radius:4px;">【暫免徵證券交易稅（0%）】</strong>優惠！
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#fffbeb; border:2px solid #fde68a; box-shadow:0 4px 12px rgba(217,119,6,0.06);">
+              <div class="memo-tag-top" style="background:#d97706; color:#fff; font-weight:800;">跨資產配置</div>
+              <div class="memo-title" style="color:#b45309; font-weight:900;">🧩 多資產 ETF (Multi-Asset)</div>
+              <div class="memo-body" style="color:#78350f; line-height:1.68;">
+                • 依客觀規則同時混合納入股票、債券等多種資產類別。<br>
+                • 讓投資人買進一檔即可達成<strong style="color:#b45309; background:#fef3c7; padding:2px 6px; border-radius:4px;">跨資產配置平衡</strong>，免手動調整持股。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/05 及 raw/06 種類與架構篇</span>
+          <span>關聯知識：wiki/entities/國內成分股ETF代表.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: Smart Beta 與主動式新規 -->
+      <section class="slide" data-title="策略創新：Smart Beta 與主動式新規">
+        <div class="slide-header">
+          <div class="washi-tape amber">🧠 策略進階探索</div>
+          <h2 class="slide-title">策略型 Smart Beta 與最新<span class="highlighter-amber">「主動式 ETF」新規</span></h2>
+          <p class="slide-subtitle">配合亞太資產管理中心政策開放，投資人擁抱更多元之策略選擇</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="memo-card" style="background:#fffbeb; border:2px solid #fde68a; box-shadow:0 4px 12px rgba(217,119,6,0.06);">
+              <div class="memo-tag-top" style="background:#d97706; color:#fff; font-weight:800;">因子量化</div>
+              <div class="memo-title" style="color:#b45309; font-weight:900;">💡 策略型 Smart Beta (高股息/主題)</div>
+              <div class="memo-body" style="color:#78350f; line-height:1.68;">
+                • <strong style="color:#b45309;">打破單純市值排序</strong>：將價值、高股息、低波動、ESG 永續等量化因子寫入指數編製規則。<br><br>
+                • <strong style="color:#b45309;">高股息注意填息</strong>：除息會從淨值扣除，唯有成分股持續獲利並<strong style="color:#78350f; background:#fef3c7; padding:2px 6px; border-radius:4px;">「填息」</strong>，配息才是實質賺進口袋的報酬。<br><br>
+                • <strong style="color:#78350f;">主題型波動劇烈</strong>：如半導體、AI 概念，缺乏跨產業分散，易隨單一產業週期大幅震盪。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#fdf8f6; border:2px solid #e7d5cd; box-shadow:0 4px 12px rgba(120,53,15,0.06);">
+              <div class="memo-tag-top" style="background:#78350f; color:#fff; font-weight:800;">市場創新</div>
+              <div class="memo-title" style="color:#5c2e0b; font-weight:900;">🧭 主動式交易所交易基金 (Active ETF)</div>
+              <div class="memo-body" style="color:#451a03; line-height:1.68;">
+                • <strong style="color:#78350f;">不再追蹤特定指數</strong>：打破被動複製規則，由專業經理團隊主動分析市場、彈性調配持股，以<strong style="color:#5c2e0b; background:#f5ebe6; padding:2px 6px; border-radius:4px;">【擊敗大盤、創造超額報酬 Alpha】</strong>為目標！<br><br>
+                • <strong style="color:#78350f;">全透明 (Fully Transparent) 申報模式</strong>：為保障知情權與撮合公平，投信公司每日盤後必須在官網<strong style="color:#5c2e0b;">完整揭露當日實際投資組合所有持股明細與權重</strong>！
+              </div>
+            </div>
+          </div>
+
+          <div class="memo-card" style="padding:16px 24px; background:#fffdf5; border:1.8px solid #fef08a;">
+            <div class="memo-body" style="color:#78350f; line-height:1.65;">
+              📌 <strong style="color:#b45309;">證交所監理配套：</strong>主動式 ETF 同步建立經理人防利益輸送自律規範，在賦予投資組合操盤靈活度的同時，<span style="color:#5c2e0b; font-weight:800;">嚴格捍衛大眾知情權與交易公平性</span>。
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/07 及 raw/09 主動式與 Smart Beta 篇</span>
+          <span>關聯知識：wiki/concepts/主動式與多資產ETF新規.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: 槓反複利耗損警示 -->
+      <section class="slide" data-title="風險警報：槓反型複利耗損陷阱">
+        <div class="slide-header">
+          <div class="washi-tape amber">⚠️ 警告</div>
+          <h2 class="slide-title">嚴禁長抱！槓桿型與反向型 ETF 的<span class="highlighter-amber">「每日複利耗損」</span></h2>
+          <p class="slide-subtitle">為什麼網路謠傳的「正2長期存股法」對新手極度危險？</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="memo-card" style="background:#fdf8f6; border:2px solid #e7d5cd; box-shadow:0 4px 12px rgba(120,53,15,0.06);">
+              <div class="memo-tag-top" style="background:#78350f; color:#fff; font-weight:800;">運作真相</div>
+              <div class="memo-title" style="color:#5c2e0b; font-weight:900;">
+                <span>📉 槓反商品的三大先天限制</span>
+              </div>
+              <div class="memo-body" style="color:#451a03; line-height:1.68;">
+                1. <strong style="color:#78350f;">僅追求「單日」倍數</strong>：槓桿 2 倍或反向 1 倍，目標僅限「單一交易日」的報酬率，跨日即產生<strong style="color:#5c2e0b; background:#f5ebe6; padding:2px 6px; border-radius:4px;">複利偏離</strong>。<br><br>
+                2. <strong style="color:#78350f;">震盪行情必然蒸發</strong>：在多空膠著、上下洗盤的橫盤行情下，因每日重新平衡（Daily Rebalancing），其淨值會出現<strong style="color:#5c2e0b; background:#f5ebe6; padding:2px 6px; border-radius:4px;">必然的複利耗損</strong>，如同走下坡樓梯。<br><br>
+                3. <strong style="color:#78350f;">無配息且內扣高</strong>：主要持倉為期貨合約，需承擔高額轉倉成本與管理費。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#fffbeb; border:2px solid #fde68a; box-shadow:0 4px 12px rgba(217,119,6,0.06);">
+              <div class="memo-tag-top blue" style="background:#0284c7; color:#fff; font-weight:800;">法規把關</div>
+              <div class="memo-title" style="color:#0369a1; font-weight:900;">
+                <span>🛡️ 臺灣證券交易所適格性門檻</span>
+              </div>
+              <div class="memo-body" style="color:#78350f; line-height:1.68;">
+                初學者或一般散戶<strong style="color:#b45309;">不可直接下單買進槓反 ETF</strong>，必須符合以下條件之一並簽署<strong style="color:#0284c7; background:#e0f2fe; padding:2px 6px; border-radius:4px; font-weight:900;">「風險預告書」</strong>：<br><br>
+                ☑️ 開立信用交易帳戶。<br>
+                ☑️ 最近一年內委託買賣認購（售）權證達 10 筆以上。<br>
+                ☑️ 最近一年內委託買賣期貨或選擇權契約達 10 筆以上。<br><br>
+                <div style="margin-top:12px; background:#fffdf5; padding:10px 14px; border-radius:10px; border-left:4px solid #0284c7; color:#1e3a8a; font-weight:700;"><strong>手帳筆記結論：</strong>僅適合專業進階者進行單日避險或短線當沖，<span style="color:#b45309; font-weight:900;">絕不可作為長期存股標的！</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/08_TWSE_槓桿型及反向型ETF特性與適格性.md</span>
+          <span>關聯知識：wiki/concepts/槓桿與反向複利耗損.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: 交易實務與小資存股 -->
+      <section class="slide" data-title="交易實務：新手開戶與下單指南">
+        <div class="slide-header">
+          <div class="washi-tape amber">📱 下單實務隨筆</div>
+          <h2 class="slide-title">新手怎麼買？盤中零股與定期定額<span class="highlighter-amber">微笑曲線</span></h2>
+          <p class="slide-subtitle">善用普惠金融機制，小預算也能輕鬆買進臺灣前 50 大企業龍頭！</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="memo-card" style="background:#f0f7ff; border:2px solid #bae6fd; box-shadow:0 4px 12px rgba(2,132,199,0.06);">
+              <div class="memo-tag-top blue" style="background:#0284c7; color:#fff; font-weight:800;">撮合規則</div>
+              <div class="memo-title" style="color:#0369a1; font-weight:900;">⏰ 集中市場交易時間</div>
+              <div class="memo-body" style="color:#1e3a8a; line-height:1.68;">
+                • 營業日上午 <strong style="color:#0284c7; background:#e0f2fe; padding:1px 5px; border-radius:4px;">9:00 至 13:30</strong>。<br>
+                • 標準單位為 <strong style="color:#0369a1;">1 張 (1,000 受益單位)</strong>。<br>
+                • 價格未滿 50 元升降單位為 0.01 元，50 元以上為 0.05 元。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#fffbeb; border:2px solid #fde68a; box-shadow:0 4px 12px rgba(217,119,6,0.06);">
+              <div class="memo-tag-top" style="background:#d97706; color:#fff; font-weight:800;">小資利器</div>
+              <div class="memo-title" style="color:#b45309; font-weight:900;">🪙 盤中零股 (1～999 股)</div>
+              <div class="memo-body" style="color:#78350f; line-height:1.68;">
+                • 交易時段同步為 <strong style="color:#b45309;">9:00 至 13:30</strong>。<br>
+                • 撮合間隔已大幅縮減至每 <strong style="color:#b45309; background:#fef3c7; padding:1px 5px; border-radius:4px;">5 秒撮合一次</strong>！<br>
+                • 限以「限價 (ROD)」單委託申報。<br>
+                • 具備 3.5% 瞬間價格穩定暫緩撮合防呆。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#f0fdf4; border:2px solid #bbf7d0; box-shadow:0 4px 12px rgba(22,163,74,0.06);">
+              <div class="memo-tag-top" style="background:#16a34a; color:#fff; font-weight:800;">紀律存股</div>
+              <div class="memo-title" style="color:#15803d; font-weight:900;">📈 定期定額微笑曲線</div>
+              <div class="memo-body" style="color:#14532d; line-height:1.68;">
+                • 約定扣款日 (如每月 5 日) 與金額 (如 1,000 元)。<br>
+                • 系統自動於盤中零股分批買進，克服追高殺低恐懼。<br>
+                • 多數券商提供每筆 <strong style="color:#15803d; background:#dcfce7; padding:1px 5px; border-radius:4px;">1 元手續費</strong> 低消優惠！
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#ffffff; border:1.8px solid var(--border-sketch); border-radius:16px; padding:18px 22px; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+            <div class="memo-title" style="color:var(--text-espresso); font-size:1.22rem; font-weight:900; margin-bottom:12px;">🚀 新手下單 3 步驟極簡手帳備忘：</div>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;">
+              <div style="background:#fffbeb; border:1.8px solid #fde68a; border-radius:12px; padding:14px 16px;">
+                <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
+                  <span style="background:#d97706; color:#ffffff; font-size:0.82rem; font-weight:900; padding:2px 7px; border-radius:6px;">STEP 1</span>
+                  <strong style="color:#b45309; font-size:1.1rem;">開立證券戶</strong>
+                </div>
+                <div style="color:#78350f; font-size:0.96rem; line-height:1.55;">
+                  備妥雙證件透過券商手機線上 5 分鐘快速開戶，綁定約定交割帳戶。
+                </div>
+              </div>
+
+              <div style="background:#fdf8f6; border:1.8px solid #e7d5cd; border-radius:12px; padding:14px 16px;">
+                <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
+                  <span style="background:#78350f; color:#ffffff; font-size:0.82rem; font-weight:900; padding:2px 7px; border-radius:6px;">STEP 2</span>
+                  <strong style="color:#5c2e0b; font-size:1.1rem;">選定標的與預算</strong>
+                </div>
+                <div style="color:#451a03; font-size:0.96rem; line-height:1.55;">
+                  首選大盤市值型或優質原型 ETF，設定每月發薪日自動扣款存股。
+                </div>
+              </div>
+
+              <div style="background:#fffdf2; border:1.8px solid #fde68a; border-radius:12px; padding:14px 16px;">
+                <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
+                  <span style="background:#d97706; color:#ffffff; font-size:0.82rem; font-weight:900; padding:2px 7px; border-radius:6px;">STEP 3</span>
+                  <strong style="color:#b45309; font-size:1.1rem;">落實長線紀律</strong>
+                </div>
+                <div style="color:#78350f; font-size:0.96rem; line-height:1.55;">
+                  不隨市場短線雜訊起舞，享受長年複利與微笑曲線平滑買進成本！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/10 及 raw/11 交易與小額制度篇</span>
+          <span>關聯知識：wiki/concepts/證券交易稅與手續費.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: 費用大拆解與省稅優勢 -->
+      <section class="slide" data-title="成本剖析：省錢與稅費優勢">
+        <div class="slide-header">
+          <h2 class="slide-title">費用大拆解：賣出證交稅 0.1%，<span class="highlighter-amber">現省 67%！</span></h2>
+          <p class="slide-subtitle">搞懂「看得見的交易手續費」與「看不見的每日內扣總費用率」</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="memo-card" style="background:#fff7ed; border:2px solid #fed7aa; box-shadow:0 4px 12px rgba(234,88,12,0.06);">
+              <div class="memo-tag-top" style="background:#ea580c; color:#fff; font-weight:800;">顯性費用</div>
+              <div class="memo-title" style="color:#c2410c; font-weight:900;">🧾 交易成本（買賣當下支付）</div>
+              <div class="memo-body" style="color:#7c2d12; line-height:1.68;">
+                • <strong style="color:#c2410c;">證券商手續費</strong>：買進與賣出均收取，公定上限為 <strong>0.1425%</strong>，電子下單多享折讓。<br><br>
+                • <strong style="color:#c2410c;">證券交易稅（重大優惠）</strong>：<br>
+                &nbsp;&nbsp;依《證券交易稅條例》第 2 條，股票型 ETF 僅在<strong style="color:#b91c1c; background:#fee2e2; padding:2px 6px; border-radius:4px;">【賣出時課徵 0.1%】</strong>！<br>
+                &nbsp;&nbsp;相較一般個股的 0.3%，直接省下 <strong style="color:#ea580c;">67%</strong> 稅金！<br>
+                &nbsp;&nbsp;債券型 ETF 更享有<strong style="color:#15803d; background:#dcfce7; padding:2px 6px; border-radius:4px;">【暫免徵證交稅 (0%)】</strong>優惠！
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#f0f7ff; border:2px solid #bae6fd; box-shadow:0 4px 12px rgba(2,132,199,0.06);">
+              <div class="memo-tag-top blue" style="background:#0284c7; color:#fff; font-weight:800;">隱性費用</div>
+              <div class="memo-title" style="color:#0369a1; font-weight:900;">💧 內扣總費用（每日淨值扣除）</div>
+              <div class="memo-body" style="color:#1e3a8a; line-height:1.68;">
+                • <strong style="color:#0284c7;">經理費</strong>：給付投信管理團隊報酬。<br>
+                • <strong style="color:#0284c7;">保管費</strong>：給付獨立保管銀行安全存管資產。<br>
+                • <strong style="color:#0284c7;">其他雜費</strong>：指數授權費、上市費與成分股調整換股交易費。<br><br>
+                • <strong style="color:#0369a1; background:#e0f2fe; padding:2px 6px; border-radius:4px;">提醒</strong>：不需要額外自備現金繳納，每日自淨值中悄悄扣除，長期小幅費用差異會透過複利影響最終累積資產！
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <div class="metric-memo-box" style="background:#fff1f2; border:2px solid #fecdd3; text-align:center; box-shadow:0 4px 12px rgba(225,29,72,0.05);">
+              <div class="metric-label" style="color:#be123c; font-weight:800;">個股賣出證交稅</div>
+              <div class="metric-value" style="color:#e11d48; font-weight:900;">0.3%</div>
+              <div class="memo-body" style="color:#9f1239; font-weight:600;">一般股票法定標準賣出稅率</div>
+            </div>
+            <div class="metric-memo-box" style="background:#fffbeb; border:2px solid #fde68a; text-align:center;">
+              <div class="metric-label" style="color:#b45309; font-weight:800;">ETF 賣出證交稅</div>
+              <div class="metric-value" style="color:#d97706; font-weight:900;">0.1%</div>
+              <div class="memo-body" style="color:#78350f; font-weight:700;">大幅省下 67% 稅費負擔！</div>
+            </div>
+            <div class="metric-memo-box" style="background:#f0fdf4; border:2px solid #bbf7d0; text-align:center;">
+              <div class="metric-label" style="color:#15803d; font-weight:800;">債券 ETF 證交稅</div>
+              <div class="metric-value" style="color:#16a34a; font-weight:900;">0.0%</div>
+              <div class="memo-body" style="color:#14532d; font-weight:700;">法定暫免徵收租稅優惠</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/12_TWSE_ETF稅費制度與租稅優惠條例.md</span>
+          <span>關聯知識：wiki/concepts/證券交易稅與手續費.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: 風險光譜與四大迷思 -->
+      <section class="slide" data-title="安全守則：防坑梯隊與進場三自保">
+        <div class="slide-header">
+          <div class="washi-tape amber">🛡️ 防身自保指南</div>
+          <h2 class="slide-title">風險梯隊與新手<span class="highlighter-amber">四大投資迷思破解</span></h2>
+          <p class="slide-subtitle">建立健康防身守則：不是所有 ETF 都適合長期存股！</p>
+        </div>
+        <div class="slide-body">
+          <div class="washi-tape amber" style="width:100%; justify-content:center; transform:none; font-size:1.05rem; padding:10px 18px;">
+            <span>📶 <strong>證交所 ETF 風險光譜梯隊：</strong>
+            【防禦型】債券 ETF ➔ 【核心穩健】大盤市值型 ETF ➔ 【成長積極】單一主題型 ETF ➔ 【極高風險】槓桿/反向型 ETF</span>
+          </div>
+
+          <div class="grid-2">
+            <div class="memo-card" style="background:#ffffff; border:1.8px solid #fde68a; border-radius:16px; box-shadow:0 4px 12px rgba(217,119,6,0.04);">
+              <div class="memo-tag-top" style="background:#d97706; color:#fff; font-weight:800;">迷思一</div>
+              <div class="memo-title" style="color:#b45309; font-weight:900; font-size:1.32rem;">以為 ETF 穩賺不賠像定存</div>
+              <div style="margin-top:10px; color:#78350f; font-size:1.06rem; line-height:1.68; background:#fffbeb; padding:12px 16px; border-radius:12px; border:1.5px solid #fde68a; border-left:5px solid #d97706;">
+                <svg width="22" height="22" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:6px; flex-shrink:0; display:inline-block;"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12.3l3.2 3.2 6.8-6.8" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <strong style="color:#b45309; font-size:1.1rem;">真相</strong>：ETF 隨市場成分股聯動，熊市大跌同樣承擔<strong style="color:#78350f; font-weight:900; background:#fef3c7; padding:2px 6px; border-radius:4px;">系統性下跌風險</strong>，<strong style="color:#78350f; font-weight:900; background:#fef3c7; padding:2px 6px; border-radius:4px;">非保本商品</strong>。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#ffffff; border:1.8px solid #e7d5cd; border-radius:16px; box-shadow:0 4px 12px rgba(120,53,15,0.04);">
+              <div class="memo-tag-top" style="background:#78350f; color:#fff; font-weight:800;">迷思二</div>
+              <div class="memo-title" style="color:#5c2e0b; font-weight:900; font-size:1.32rem;">看到爆紅標的就盲目追高</div>
+              <div style="margin-top:10px; color:#451a03; font-size:1.06rem; line-height:1.68; background:#fdf8f6; padding:12px 16px; border-radius:12px; border:1.5px solid #e7d5cd; border-left:5px solid #78350f;">
+                <svg width="22" height="22" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:6px; flex-shrink:0; display:inline-block;"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12.3l3.2 3.2 6.8-6.8" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <strong style="color:#5c2e0b; font-size:1.1rem;">真相</strong>：當溢價 ≥ 3% 甚至 5%，追高買進現買現貴，熱度冷卻必受<strong style="color:#78350f; font-weight:900; background:#f5ebe6; padding:2px 6px; border-radius:4px;">溢價收斂虧損</strong>。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#ffffff; border:1.8px solid #fde68a; border-radius:16px; box-shadow:0 4px 12px rgba(217,119,6,0.04);">
+              <div class="memo-tag-top" style="background:#d97706; color:#fff; font-weight:800;">迷思三</div>
+              <div class="memo-title" style="color:#b45309; font-weight:900; font-size:1.32rem;">以為高配息等於高總報酬</div>
+              <div style="margin-top:10px; color:#78350f; font-size:1.06rem; line-height:1.68; background:#fffbeb; padding:12px 16px; border-radius:12px; border:1.5px solid #fde68a; border-left:5px solid #d97706;">
+                <svg width="22" height="22" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:6px; flex-shrink:0; display:inline-block;"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12.3l3.2 3.2 6.8-6.8" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <strong style="color:#b45309; font-size:1.1rem;">真相</strong>：配息會從淨值扣除，唯有<strong style="color:#78350f; font-weight:900; background:#fef3c7; padding:2px 6px; border-radius:4px;">成功填息</strong>才是實賺，未填息只是<strong style="color:#78350f; font-weight:900; background:#fef3c7; padding:2px 6px; border-radius:4px;">本金左手換右手</strong>。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#ffffff; border:1.8px solid #e7d5cd; border-radius:16px; box-shadow:0 4px 12px rgba(120,53,15,0.04);">
+              <div class="memo-tag-top" style="background:#78350f; color:#fff; font-weight:800;">迷思四</div>
+              <div class="memo-title" style="color:#5c2e0b; font-weight:900; font-size:1.32rem;">誤信網路想用「槓桿正2存股」</div>
+              <div style="margin-top:10px; color:#451a03; font-size:1.06rem; line-height:1.68; background:#fdf8f6; padding:12px 16px; border-radius:12px; border:1.5px solid #e7d5cd; border-left:5px solid #78350f;">
+                <svg width="22" height="22" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:6px; flex-shrink:0; display:inline-block;"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12.3l3.2 3.2 6.8-6.8" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <strong style="color:#5c2e0b; font-size:1.1rem;">真相</strong>：槓反型因追求單日倍數，震盪橫盤必有<strong style="color:#78350f; font-weight:900; background:#f5ebe6; padding:2px 6px; border-radius:4px;">複利耗損</strong>，<strong style="color:#78350f; font-weight:900; background:#f5ebe6; padding:2px 6px; border-radius:4px;">嚴禁長期存股持有！</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>引用文獻：raw/08、raw/13 及 raw/14 風險與風控篇</span>
+          <span>關聯知識：wiki/synthesis/證交所新手防坑與風險光譜.md</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 13: 官方神隊友：e添富平台與結語 -->
+      <section class="slide" data-title="實戰工具：證交所 e添富平台與檢核">
+        <div class="slide-header">
+          <div class="washi-tape amber">🌐 官方數位工具</div>
+          <h2 class="slide-title">官方投資神隊友：<span class="highlighter-amber">「e添富」平台</span>與下單檢核卡</h2>
+          <p class="slide-subtitle">善用臺灣證券交易所官方一站式整合資訊平台，投資決策更踏實</p>
+        </div>
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="memo-card" style="background:#f0f7ff; border:2px solid #bae6fd; box-shadow:0 4px 12px rgba(2,132,199,0.06);">
+              <div class="memo-tag-top blue" style="background:#0284c7; color:#fff; font-weight:800;">核心功能 1</div>
+              <div class="memo-title" style="color:#0369a1; font-weight:900;">🔍 智慧視覺化篩選</div>
+              <div class="memo-body" style="color:#1e3a8a; line-height:1.68;">
+                依標的資產 (股票/債券/商品)、投資區域、配息頻率 (月配/季配/不配息) 一鍵篩選出最符合個人理財目標的標的。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#fffbeb; border:2px solid #fde68a; box-shadow:0 4px 12px rgba(217,119,6,0.06);">
+              <div class="memo-tag-top" style="background:#d97706; color:#fff; font-weight:800;">核心功能 2</div>
+              <div class="memo-title" style="color:#b45309; font-weight:900;">📊 大數據排行總覽</div>
+              <div class="memo-body" style="color:#78350f; line-height:1.68;">
+                即時掌握全市場「資產規模 (AUM)」、「成交金額」、「受益人人數消長」，深度了解全臺資金聚焦方向。
+              </div>
+            </div>
+
+            <div class="memo-card" style="background:#f0fdf4; border:2px solid #bbf7d0; box-shadow:0 4px 12px rgba(22,163,74,0.06);">
+              <div class="memo-tag-top" style="background:#16a34a; color:#fff; font-weight:800;">核心功能 3</div>
+              <div class="memo-title" style="color:#15803d; font-weight:900;">📅 配息行事曆</div>
+              <div class="memo-body" style="color:#14532d; line-height:1.68;">
+                統整所有除息交易日、現金股利發放日、每單位配息金額與歷史年化殖利率，規劃被動收入最省力。
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#ffffff; border:1.8px solid var(--border-sketch); border-radius:16px; padding:18px 22px; box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+            <div class="memo-title" style="color:var(--text-espresso); font-size:1.22rem; font-weight:900; margin-bottom:12px;">✅ 新手下單前 4 步快速手帳確認卡：</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div style="background:#fffbeb; border:1.5px solid #fde68a; border-radius:10px; padding:11px 14px; color:#78350f; font-size:0.98rem; font-weight:700;">
+                ☑️ 我知道這檔 ETF 追蹤的是什麼指數或資產？
+              </div>
+              <div style="background:#fdf8f6; border:1.5px solid #e7d5cd; border-radius:10px; padding:11px 14px; color:#5c2e0b; font-size:0.98rem; font-weight:700;">
+                ☑️ 我已查詢當前即時折溢價，確認沒有追在 3% 以上溢價？
+              </div>
+              <div style="background:#fffdf2; border:1.5px solid #fde68a; border-radius:10px; padding:11px 14px; color:#78350f; font-size:0.98rem; font-weight:700;">
+                ☑️ 若是高股息或主題型，我清楚其配息與單一產業波動？
+              </div>
+              <div style="background:#fdf8f6; border:1.5px solid #e7d5cd; border-radius:10px; padding:11px 14px; color:#5c2e0b; font-size:0.98rem; font-weight:700;">
+                ☑️ 若是槓反型，我明白其僅能短線且嚴禁長線存股？
+              </div>
+            </div>
+          </div>
+
+          <div class="washi-tape amber" style="width:100%; justify-content:center; transform:none; font-size:1.1rem; padding:12px 20px;">
+            🎉 <strong>恭喜完成學習！</strong> 依循客觀規則、善用定期定額與「e添富」工具，讓指數化投資陪伴資產穩健成長！
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>官方平台網址：https://www.twse.com.tw/zh/ETFortune/</span>
+          <span>完整 Wiki 知識庫連結：wiki/index.md ｜ 規範綱領：agent.md</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 底部手帳翻頁控制列 -->
+  <footer>
+    <div class="keyboard-hint">
+      <span>手帳翻頁：</span>
+      <span class="kbd">←</span> <span class="kbd">→</span>
+      <span>或</span>
+      <span class="kbd">空白鍵</span>
+    </div>
+
+    <div class="indicators" id="dotsContainer"></div>
+
+    <div style="display:flex; gap:14px;">
+      <button class="nav-btn secondary" id="prevBtn" onclick="prevSlide()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        上一頁
+      </button>
+      <button class="nav-btn" id="nextBtn" onclick="nextSlide()">
+        下一頁
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- 互動控制 JavaScript -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slideCounter = document.getElementById('slideCounter');
+    const progressBar = document.getElementById('progressBar');
+    const dotsContainer = document.getElementById('dotsContainer');
+
+    // 動態生成手帳圓點
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.className = `dot ${i === 0 ? 'active' : ''}`;
+      dot.title = `跳轉至第 ${i + 1} 頁`;
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlide() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentSlide);
+      });
+
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentSlide);
+      });
+
+      // 更新進度條與頁碼
+      const progressPercent = ((currentSlide + 1) / totalSlides) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+      slideCounter.textContent = `第 ${currentSlide + 1} / ${totalSlides} 頁`;
+
+      // 更新按鈕狀態
+      prevBtn.style.visibility = currentSlide === 0 ? 'hidden' : 'visible';
+      if (currentSlide === totalSlides - 1) {
+        nextBtn.innerHTML = `回到首頁 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.77 20 14.44 20 13c0-4.42-3.58-8-8-8zm-6.26.74L4.28 7.2 5.3 8.22C4.5 9.61 4 11.24 4 13c0 4.42 3.58 8 8 8 1.76 0 3.39-.5 4.78-1.3l1.02 1.02 1.46-1.46L5.74 5.74z"/></svg>`;
+      } else {
+        nextBtn.innerHTML = `下一頁 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
+      }
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+      } else {
+        currentSlide = 0;
+      }
+      updateSlide();
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+      }
+    }
+
+    function goToSlide(index) {
+      if (index >= 0 && index < totalSlides) {
+        currentSlide = index;
+        updateSlide();
+      }
+    }
+
+    // 鍵盤無障礙導航
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        goToSlide(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        goToSlide(totalSlides - 1);
+      }
+    });
+
+    updateSlide();
+  </script>
+</body>
+</html>
