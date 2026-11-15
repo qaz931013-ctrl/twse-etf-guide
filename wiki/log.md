@@ -268,3 +268,14 @@
   3. **完成全流程首輪實踐**：
      - 針對 13 頁大綱與 Storyboard 規格執行端到端渲染與嚴格檢核。
      - 驗證 DOM 結構（無多餘重疊閉合標籤）、事實一致性（數據 100% 引述 TWSE）、視覺語意色彩精準對齊，目前 Working tree clean。
+
+
+---
+
+## [2026-11-15] github-sync | 成功授權並推送到 GitHub 遠端儲存庫 origin/main
+* **操作類型**：Remote Repository Synchronization & Milestone Push
+* **遠端目標**：`https://github.com/qaz931013-ctrl/twse-etf-guide.git`（分支：`main`）
+* **執行成果**：
+  1. 使用者完成 Git Credential Manager 授權，憑證已保存於本機 Windows 憑證庫。
+  2. 首度完整推送所有歷史紀錄（15 篇 TWSE 原始文獻、Wiki 知識庫、設計系統規格書、13 頁晨曦暖陽手帳風正式簡報）。
+  3. 驗證遠端同步狀態：`Your branch is up to date with 'origin/main'`，達成完整版本控制閉環。
